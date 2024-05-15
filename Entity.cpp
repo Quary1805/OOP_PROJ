@@ -40,7 +40,7 @@ float Player::Attack(Move* mov, Entity* who)
 			canUse = true;
 	}
 
-	if (!mov->Success() || !canUse)
+	if (!mov->Success() || !canUse || !this->IsAlive())
 		return 0.0f;
 
 	srand(time(0));
@@ -75,6 +75,7 @@ void Player::Print()
 	{
 		if (this->equipment->at(i) != nullptr)
 		{
+			equipmentCount++;
 			cout << "---------------------------------" << endl;
 			this->equipment->at(i)->Print();
 		}
@@ -158,7 +159,7 @@ float Enemy::Attack(Entity* who)
 {
 	srand(0);
 	Move* mov = this->species->GetMoves()->at(rand() % this->species->GetMoves()->size());
-	if (!mov->Success())
+	if (!mov->Success() || !this->IsAlive())
 		return 0.0f;
 
 	srand(time(0));

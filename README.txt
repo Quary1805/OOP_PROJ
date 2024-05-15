@@ -3,8 +3,7 @@ Můj projekt je takové malé RPG, mám World, v něm jsou definované nějaké 
 takže založím svět World
 v něm druhy EntityDef se statama Stats
 těm dám tahy Move
-pak vytvořím instance Entity
+pak vytvořím instance Entity (Player & Enemy)
 hráčovi dám Item
-pošlu je do boje
-a z mrtvého se stane abstrakntní AbstractEntity
-tadá!
+pošleme je do boje
+a z mrtvého se stane duch AbstractEntity (pro ukázku)

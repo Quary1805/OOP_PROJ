@@ -64,7 +64,11 @@ int main() {
 
 	// Vypíšeme si je
 
+	cout << "+++ IGOR +++" << endl << endl;
+
 	igor->Print();
+
+	cout << endl << endl << "+++ DRAK +++" << endl << endl;
 
 	drak->Print();
 
@@ -87,6 +91,8 @@ int main() {
 		duch = igor;
 
 	// A kdo nám umøel?
+
+	cout << endl << endl << "+++ DUCH +++" << endl << endl;
 
 	duch->Print();
 

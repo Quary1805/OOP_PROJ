@@ -19,13 +19,14 @@ EntityDef::EntityDef(string n, Stats* stats)
 }
 
 EntityDef::~EntityDef() {
-	this->entityDefCount--;
 	if (moves != nullptr) {
 		for (Move* move : *moves) {
 			delete move;
 		}
 		delete moves;
 	}
+
+	this->entityDefCount--;
 }
 
 void EntityDef::AddMove(Move* move)
